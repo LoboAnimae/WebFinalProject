@@ -1,13 +1,137 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+html {
+  font-family: 'Raleway', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#navbar {
+  width: 100vw;
+  height: 71px;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  background-color: #e3dac9;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  min-width: 850px;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: black;
+}
+
+#navWho,
+#navWhere,
+#navGrow,
+#navEnd,
+#navRightNow,
+#navContact {
+  transition: all 500ms;
+}
+
+#navWho:hover,
+#navWhere:hover,
+#navGrow:hover,
+#navEnd:hover,
+#navRightNow:hover,
+#navContact:hover {
+  background-color: #eee6d6;
+  transform: scale(1.5);
+}
+
+#textNav {
+  margin-top: 27px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#welcomeToMyLife {
+  position: relative;
+  top: 63px;
+  width: 100vw;
+  height: 500px;
+  background-color: #eee;
+  left: -8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 850px;
+}
+
+#welcomeToMyLifeText {
+  font-size: x-large;
+  animation: fadein 3s forwards;
+}
+
+#secondWelcomeText {
+  opacity: 0%;
+  animation: fadein 2s forwards;
+  animation-delay: 1.5s;
+  font-size: xx-large;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    font-size: xx-large;
+  }
+  10% {
+    font-size: xxx-large;
+  }
+  15% {
+    font-size: xx-large;
+  }
+  30% {
+    font-size: xxx-large;
+  }
+  50% {
+    font-size: xx-large;
+  }
+  100% {
+    font-size: xx-large;
+  }
+}
+
+#whoAmI {
+  position: relative;
+  top: 44px;
+  background-color: #ddd;
+  left: -8px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+#whoAmIText {
+  position: relative;
+  left: -400px;
+  min-width: 850px;
+}
+
+#stickyScroll {
+  position: sticky;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  top: 450px;
+  z-index: 12;
+}
+
+#stickyScrollText {
 }
